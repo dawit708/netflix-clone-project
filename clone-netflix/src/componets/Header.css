@@ -1,0 +1,247 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+   .header_outer_container {
+    background-color: #141414; 
+    color: white;
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    height: 70px; 
+    display: flex;
+    align-items: center;
+    z-index: 1000; 
+    transition: background-color 0.5s ease;
+}
+body{
+    background-color: #141414;
+}
+.header_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4%;
+}
+
+.header_left ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 20px; 
+}
+
+.header_left ul li {
+    cursor: pointer;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.header_left ul li:hover {
+    color: #b3b3b3; 
+}
+.header_left{
+    background-color:#141414 ;
+}
+.header_right {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.header_outer_continer.scrolled {
+    background-color: #141414;
+}
+
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+}
+
+.header_left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+   
+}
+
+.header_left ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+}
+
+.header_left ul li {
+    color: #e5e5e5;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+.header_left ul li:hover {
+    color: #fff;
+}
+
+.header_left ul li:first-child {
+    margin-right: 10px;
+}
+
+.header_left ul li img {
+    width: 92px;
+    height: 31px;
+    filter: brightness(1.1);
+}
+
+.header_right {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    background-color: black;
+}
+
+.header_right img {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    filter: brightness(0.9);
+}
+
+.header_right img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Specific icon sizes */
+.header_right img:nth-child(1) { /* Search */
+    width: 20px;
+    height: 20px;
+}
+
+.header_right img:nth-child(2) { /* Notification */
+    width: 20px;
+    height: 20px;
+}
+
+.header_right img:nth-child(3) { /* Account */
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+}
+
+.header_right img:nth-child(4) { /* Dropdown */
+    width: 12px;
+    height: 12px;
+    margin-left: -10px;
+}
+
+/* Account dropdown container */
+.account-dropdown {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .header_left {
+        gap: 30px;
+    }
+    
+    .header_left ul {
+        gap: 15px;
+    }
+    
+    .header_left ul li:nth-child(n+6) {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header_outer_continer {
+        padding: 15px 20px;
+    }
+    
+    .header_left ul li:not(:first-child):not(:nth-child(2)) {
+        display: none;
+    }
+    
+    .header_right {
+        gap: 15px;
+    }
+    
+    .header_left {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header_outer_continer {
+        padding: 12px 15px;
+    }
+    
+    .header_left ul li img {
+        width: 75px;
+        height: 25px;
+    }
+    
+    .header_right img:nth-child(1),
+    .header_right img:nth-child(2) {
+        display: none;
+    }
+}
+
+.header_left ul li.active {
+    color: #fff;
+    font-weight: 600;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-bar {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    padding: 5px 10px;
+    width: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.search-bar.active {
+    width: 220px;
+    opacity: 1;
+}
+
+.header_outer_continer {
+    transition: background-color 0.5s ease;
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.header_black {
+    background-color: #111;
+}
+
+.active {
+    font-weight: bold;
+    color: white; 
+}
