@@ -23,7 +23,7 @@ function RowList() {
             <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
             <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
             <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
-             <Row title="TV Shows" fetchUrl={requests.fetchTvShow}/> 
+             <Row title="TV Shows" fetchUrl={requests.fetchTrending} />
         
         </div>
     );
