@@ -8,5 +8,8 @@
     "cors": "^2.8.6",
     "movie-trailer": "^3.2.2",
     "react-youtube": "^10.1.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }

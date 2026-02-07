@@ -1,10 +1,13 @@
 {
-  "name": "clone-netflix",
-  "private": true,
+    "name": "clone-netflix",
+   "homepage" : "https://dawit708.github.io/netflix-clone-project",
   "version": "0.0.0",
+   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
